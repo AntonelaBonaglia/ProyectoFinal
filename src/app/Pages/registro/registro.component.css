@@ -1,0 +1,28 @@
+.formulario{
+    position: relative;
+    height: 450px;
+    width: 330px;
+    margin: 20px auto;
+    padding: 40px 60px;
+    background: url(https://i.ibb.co/YX0k3D6/imgLogin.png) no-repeat   center center #c7c7c74b;   
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 0px 10px 30px -5px #000;
+}
+
+.contInputs{
+    position: relative;
+    top: 10px;
+}
+
+.input{
+    width: 330px;
+}
+
+.error{
+    background-color:rgba(248, 123, 123, 0.918);
+}
+
+.warning{
+    background-color: rgba(242, 250, 130, 0.945);
+}

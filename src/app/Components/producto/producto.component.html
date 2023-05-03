@@ -1,0 +1,22 @@
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-card class="card">
+
+    <mat-grid-tile>
+      <img mat-card-image src="{{ data.thumbnail }}" alt="" />
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div class="descrip">
+        <h4 >{{ data.title }}</h4>
+        <p>{{ data.price | currency : "ARS" }}</p>
+        <mat-card-actions >
+            <button class="butt" mat-stroked-button color="primary" routerLink="/producto/{{ data.id }}"> Ver Detalle
+            </button>
+            <button class="butt" mat-stroked-button color="primary" (click)="handleEliminar()">Eliminar
+            </button>
+        </mat-card-actions>
+      </div>
+    </mat-grid-tile>
+    
+  </mat-card>
+</mat-grid-list>

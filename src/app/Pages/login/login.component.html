@@ -1,0 +1,38 @@
+<div class="containerLogin">
+  <div class="login">
+    <h2 class="active"> iniciar sesión </h2>
+
+    <form [formGroup]="formLogin" (ngSubmit)="ingresar()">    
+      <input type="email" formControlName="email" class="text" >
+      <span>Email</span>
+      <p class="campo" *ngIf="formLogin.get('email')?.errors && formLogin.get('email')?.dirty">
+        Campo obligatorio con formato e-mail
+        </p>
+
+      <input type="password" formControlName="password" class="text pass">
+      <span class="pass">Contraseña</span>
+      <div *ngIf="formLogin.get('password')?.errors && formLogin.get('password')?.dirty">
+        <p class="campo" *ngIf="formLogin.get('password')?.hasError('minlength')">
+          Debe conter 6 caracteres como mínimo
+        <p class="campo" *ngIf="formLogin.get('password')?.hasError('maxlength')">
+          Debe conter 10 caracteres como máximo
+        </p>
+        <p class="campo" *ngIf="formLogin.get('password')?.hasError('required')">
+          Campo obligatorio
+        </p>
+      </div>
+      <br>
+
+      <input type="checkbox" id="checkbox-1-1" class="custom-checkbox" />
+      <label for="checkbox-1-1" class="custom">Recordar</label>
+      
+      <button class="signin" type="submit" [disabled]="formLogin.invalid" routerLink="/">
+        Ingresar
+      </button>
+
+      <hr>
+      <p class="contraseña" routerLink="**">Olvido su contraseña?</p>
+    </form>
+
+  </div>
+</div>

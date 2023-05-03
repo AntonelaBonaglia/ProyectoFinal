@@ -1,0 +1,22 @@
+<div *ngIf="loading">Hola Cargando...</div>
+<h2>{{ producto!.title }}</h2>
+<div *ngIf="!loading" class="container">
+  <div class="containerImg">
+    <img
+      *ngFor="let picture of producto?.pictures"
+      src="{{ picture!.url }}"
+      alt=""
+      class="img"
+    />
+  </div>
+  <div class="text">
+    <div>
+        <p>Precio por unidad: {{ producto!.price | currency }}</p>
+        <p>Cantidad: {{ producto!.sold_quantity }}</p>
+      </div>
+      <p>{{ producto!.plain_text }}</p>
+      <button mat-raised-button routerLink="/" class="boton">Volver</button>
+      <button mat-raised-button routerLink="**" class="boton">Comprar</button>
+  </div>
+ 
+</div>

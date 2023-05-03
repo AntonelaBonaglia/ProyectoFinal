@@ -1,0 +1,34 @@
+.card{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top:90px;
+    right:140px;
+    width: 750px;
+    height: 250px;
+    padding: 0px 15px;
+}
+img{
+    padding-left: 20px;
+    width: 130px;
+    left: 90px;
+}
+
+.descrip{
+   width: 370px;
+   position: relative;
+   bottom: 10px;
+}
+h4{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    padding-right: 20px;
+}
+
+.butt{
+    margin: 0px 15px;
+}
